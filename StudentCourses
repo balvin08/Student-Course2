@@ -1,0 +1,35 @@
+import java.util.HashMap;
+import java.util.Map;
+
+class StudentCourses {
+    // Map to store course names and marks
+    private Map<String, Integer> courses;
+
+    // Constructor
+    public StudentCourses() {
+        courses = new HashMap<>();
+    }
+
+    // Method to add a course and its marks
+    public void addCourse(String course, int marks) {
+        courses.put(course, marks);
+    }
+
+    // Method to display all courses and marks
+    public void displayCourses() {
+        System.out.println("Courses and Marks:");
+        for (Map.Entry<String, Integer> entry : courses.entrySet()) {
+            System.out.println("Course: " + entry.getKey() + ", Marks: " + entry.getValue());
+        }
+    }
+
+    // Main method
+    public static void main(String[] args) {
+        StudentCourses studentCourses = new StudentCourses();
+        studentCourses.addCourse("Mathematics", 85);
+        studentCourses.addCourse("Computer Science", 90);
+        studentCourses.addCourse("Physics", 78);
+
+        studentCourses.displayCourses();
+    }
+}
